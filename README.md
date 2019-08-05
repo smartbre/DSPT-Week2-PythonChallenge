@@ -311,7 +311,6 @@ Create a new column that has the 'release_clause' in dollars.
 // answer here //
 
 #### 4) Who is the oldest player in Argentina and how old is he?  
-Hint: a groupby clause might help here
 
 
 ```python
