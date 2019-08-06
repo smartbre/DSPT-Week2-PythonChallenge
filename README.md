@@ -156,9 +156,9 @@ df = None
 df.head()
 ```
 
-<b>2) Check for duplicates
+**2) Check for duplicates**
     
-First, check how many rows are in the dataset, then check how many unique values are in the "ID" column.</b>
+**First, check how many columns and rows are in the dataset, then check how many unique values are in the "ID" column.**
 
 
 ```python
