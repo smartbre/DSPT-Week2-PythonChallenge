@@ -49,82 +49,35 @@ players = {
 }
 ```
 
-<b>1) Create a function that takes in a dictionary and returns a list of keys for that dictionary. In our case it should return a list of player names. Use python's documentation on dictionaries for help if needed. We started the function below for you, complete it below the doc string (don't forget your return statement!)</b>
+**1) Create a `list` of all the keys in the `players` dictionary. Use python's documentation on dictionaries for help if needed. Store the list of player names in a variable called `player_names` to use in the next question.**
 
 
 ```python
-def get_keys(dict_):
-    '''
-    Generate list of keys in dictionary
-    
-    Parameters
-    ----------
-    dict_ : dictionary object
-        Dictionary with player names as keys
-    Returns
-    --------
-    keys_ :  list object
-        List object containing keys for the dictionary
-    '''
-    pass
+# Get the list of all player names from the dictionary
+player_names = None
 ```
 
+**2) Great! Now that we have each players name, let's use that information to create a `list` of `tuples` containing each player's name along with their nationality. Store the list in a variable called `player_nationalities`**
+
 
 ```python
-#assign output of get_keys function to player_names
-player_names = get_keys(players)
+# Generate list of tuples such that the first element in the tuple is 
+# a players name and the second is their nationality 
+# Ex: [('L. Messi', 'Argentina'), ('Christiano Ronaldo', 'Portugal'), ...]
+player_nationalities = None
 ```
 
-<b> 2) Great! Now that we have each players name, let's use that information to create a list of tuples containing each player's name along with their nationality.</b>
+**3) Now, define a function called `get_players_on_team` that returns a `list` of the names of all the players who have played on a given team.** 
+
+Your function should take two arguments: 
+* a dictionary of player information
+* a `string` of the team you are trying to find the players for 
+
+**Be sure that your function has a `return` statement.**
 
 
 ```python
-def get_nationality(dict_, player_names):
-    '''
-    Generate list of tuples such that the first element in the tuple is 
-    a players name and the second is their nationality 
-    [('L. Messi', 'Argentina'), ('Christiano Ronaldo', 'Portugal'), ...]
-    
-    Parameters
-    ----------
-    dict_ : dictionary object
-        Dictionary of player information
-    player_names: 
-        List of player names
-    Returns
-    --------
-    nationalities :  list object
-        List object containing tuples of players name and their nationality 
-    '''
-    pass 
-```
-
-
-```python
-nationality = get_nationality(players, player_names)
-```
-
-#### 3) Now, create a function that obtains players based on which teams they've been on.
-
-
-```python
-def get_players_on_team(dict_,team_name):
-    '''
-    Generate a list of players that have ever played on a given team.
-    
-    Parameters
-    ----------
-    dict_ : dictionary object
-        Dictionary of player information
-    team_name: string
-        Name of team to be searched for
-    
-    Returns
-    --------
-    player_list : list object
-        List containing player names
-    '''
-    pass
+# Define your get_players_on_team function here.
 ```
 
 
