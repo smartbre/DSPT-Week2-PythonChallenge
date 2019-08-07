@@ -115,13 +115,13 @@ df.head()
 
 
 ```python
-#code here to see the size of the dataframe
+# code here to see the size of the dataframe
 
 ```
 
 
 ```python
-#code here to check number of unique ids
+# code here to check number of unique ids
 
 ```
 
@@ -131,13 +131,13 @@ It looks like there are duplicates.  Get rid of them by dropping duplicate rows.
 
 
 ```python
-#code here
+# code here
 
 ```
 
 
 ```python
-#now see how many rows there are
+# now see how many rows there are
 
 ```
 
@@ -147,13 +147,13 @@ Drop rows for which "Release Clause" is none or not given. This is part of a soc
 
 
 ```python
-#code here to drop n/a rows
+# code here to drop n/a rows
 
 ```
 
 
 ```python
-#now check how many rows are left 
+# now check how many rows are left 
 
 ```
 
@@ -162,7 +162,7 @@ First create a function, then use it on your dataframe. Create a function that c
 
 
 ```python
-#code here to write a helper function
+# code here to write a helper function
 def convert_height(height):
     '''
     inputs: height (string)
@@ -174,13 +174,13 @@ def convert_height(height):
 
 
 ```python
-#test here
+# test here
 convert_height("5'7")
 ```
 
 
 ```python
-#code here to use the function on the height column
+# code here to use the function on the height column
 
 ```
 
@@ -199,7 +199,7 @@ import seaborn as sns
 
 
 ```python
-#histogram
+# histogram
 
 ```
 
@@ -209,13 +209,13 @@ Make sure to include x labels on your chart!
 
 
 ```python
-#code here to get the top 10 countries with the most players
+# code here to get the top 10 countries with the most players
 
 ```
 
 
 ```python
-#code here to plot a bar chart
+# code here to plot a bar chart
 plt.subplots(figsize=(10,6))
 
 ```
@@ -226,12 +226,15 @@ What can we say about these two features? </b>
 
 
 ```python
-#code here to plot a scatterplot
+# code here to plot a scatterplot
 
 
 ```
 
-// answer here //
+
+```python
+# Your written answer here
+```
 
 ### Exploring Statistical Data
 
@@ -245,7 +248,7 @@ Create a new column that has the 'release_clause' in dollars.
 
 
 ```python
-#code here to convert the column of euros to dollarss
+# code here to convert the column of euros to dollarss
 
 ```
 
@@ -255,13 +258,21 @@ Create a new column that has the 'release_clause' in dollars.
 
 
 ```python
-#code here
+# code here
 
 ```
 
 <b>3) What is the mean age and the median age for the players in this dataset?  How are the mean and median related to each other?</b>
 
-// answer here //
+
+```python
+# code here
+```
+
+
+```python
+# Your written answer here
+```
 
 #### 4) Who is the oldest player in Argentina and how old is he?  
 
@@ -270,7 +281,10 @@ Create a new column that has the 'release_clause' in dollars.
 # code here
 ```
 
-// answer here //
+
+```python
+# Your written answer here
+```
 
 ## Linear Regression
 
@@ -282,12 +296,14 @@ c. Would it be a good idea to include both of these in a regression model?
 
 
 ```python
-#code here
-
+# code here
 
 ```
 
-// answer here //
+
+```python
+# Your written answer here
+```
 
 <b>2) Fit a linear regression using the `ols` module of statsmodels</b>
 
@@ -300,7 +316,7 @@ Once you have fit the linear regression, display the results (coefficient values
 
 
 ```python
-#code here
+# code here
 import statsmodels.api as sm
 from statsmodels.formula.api import ols
 
@@ -321,4 +337,7 @@ Two players have the following stats:
 
 Assume all the remaining stats are the same for both players. By how much can we expect the Release Clause of each player to be different? Explain how you obtained your calculation. </b>
 
-// answer here //
+
+```python
+# Your written answer here
+```
