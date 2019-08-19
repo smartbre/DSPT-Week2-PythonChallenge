@@ -4,10 +4,10 @@
 This assessment is designed to test your understanding of the Mod 1 material. It covers:
 
 * Python Fundamentals
-* Working with Statistical Data
 * Pandas and Numpy
 * Data Visualization
-* Linear Regression
+* Exploring Statistical Data
+
 
 Read the instructions carefully. You will be asked both to write code and respond to a few short answer questions.
 
@@ -87,7 +87,7 @@ players_on_manchester_united = get_players_on_team(players,'Manchester United')
 
 ## Pandas and Numpy
 
-In this section you will be doing some preprocessing and exploratory data analysis for a dataset for the videogame FIFA19 (https://www.kaggle.com/karangadiya/fifa19).  The dataset contains both data for the game as well as information about the players' real life careers.  You will be building toward running a regression. 
+In this section you will be doing some preprocessing and exploratory data analysis for a dataset for the videogame FIFA19 (https://www.kaggle.com/karangadiya/fifa19).  The dataset contains both data for the game as well as information about the players' real life careers. 
 
 **1) Read the CSV file into a pandas dataframe**
 
@@ -286,58 +286,4 @@ Create a new column that has the 'release_clause' in dollars.
 # Your written answer here
 ```
 
-## Linear Regression
 
-<b> 1) What are the covariance and correlation between "GKDiving" and "GKHandling"? </b>
-
-a. What is the difference between covariance and correlation?  
-b. What can you infer from the relationship between these variables?  
-c. Would it be a good idea to include both of these in a regression model?
-
-
-```python
-# code here
-
-```
-
-
-```python
-# Your written answer here
-```
-
-<b>2) Fit a linear regression using the `ols` module of statsmodels</b>
-
-Let's see how well each players' in-game stats reflect their real-world monetary value as a player. We  will not be considering real-world factors for this model, just the variables listed below.
-
-- y variable: Release Clause (the one in euros)
-- x variables: 'Finishing', 'HeadingAccuracy', 'ShortPassing', 'Volleys', 'Dribbling', 'Curve', 'FKAccuracy', 'LongPassing', 'BallControl', 'Acceleration', 'SprintSpeed', 'Agility', 'Reactions', 'Balance', 'ShotPower', 'Jumping', 'Stamina', 'Strength', 'LongShots', 'Aggression','Interceptions', 'Positioning', 'Vision', 'Penalties', 'Composure','Marking', 'StandingTackle', 'SlidingTackle', 'GKDiving', 'GKHandling','GKKicking', 'GKPositioning', 'GKReflexes'
-
-Once you have fit the linear regression, display the results (coefficient values, $R^2$, etc.). Displaying the results can be done with one method!
-
-
-```python
-# code here
-import statsmodels.api as sm
-from statsmodels.formula.api import ols
-
-Y = df['Release Clause']
-X = df[['Finishing', 'HeadingAccuracy', 'ShortPassing', 'Volleys', 'Dribbling', 'Curve', 'FKAccuracy', 'LongPassing', 'BallControl', 'Acceleration', 'SprintSpeed', 'Agility', 'Reactions', 'Balance', 'ShotPower', 'Jumping', 'Stamina', 'Strength', 'LongShots', 'Aggression','Interceptions', 'Positioning', 'Vision', 'Penalties', 'Composure','Marking', 'StandingTackle', 'SlidingTackle', 'GKDiving', 'GKHandling','GKKicking', 'GKPositioning', 'GKReflexes']]
-
-
-
-```
-
-<b> 3) Interpret the results of the regression. 
-
-Two players have the following stats: 
-
-1) Finishing : 1, Heading Accuracy : 10, ShortPassing : 5
-
-2) Finishing : 1, Heading Accuracy :  8, ShortPassing : 5
-
-Assume all the remaining stats are the same for both players. By how much can we expect the Release Clause of each player to be different? Explain how you obtained your calculation. </b>
-
-
-```python
-# Your written answer here
-```
