@@ -7,21 +7,20 @@ This assessment is designed to test your understanding of the Mod 1 material. It
 * Working with Statistical Data
 * Pandas and Numpy
 * Data Visualization
-* Linear Regression
 
 Read the instructions carefully. You will be asked both to write code and respond to a few short answer questions.
 
 #### Note on the short answer questions
-For the short answer questions _please use your own words_. The expectation is that you have **not** copied and pasted from an external source, even if you consult another source to help craft your response. While the short answer questions are not necessarily being assessed on grammatical correctness or sentence structure, do your best to communicate yourself clearly.
+For the short answer questions _please use your own words_. The expectation is that you have **not** copied and pasted from an external source, even if you consult another source to help craft your response. While the short answer questions are not necessarily being assessed on grammatical correctness or sentence structure, you should do your best to communicate yourself clearly.
 
-## Python Fundamentals
+## Python Fundamentals [Suggested Time: 20 min]
 
 In the first section, we will work with various Python data types and try to accomplish certain tasks using some Python fundamentals. Below, we've defined a dictionary with soccer player names as keys for nested dictionaries containing information about each players age, nationality, and a list of teams they have played for.   
 
 
 ```python
 players = {
-	'L. Messi': {
+    'L. Messi': {
 		'age': 31,
 		'nationality': 'Argentina',
 		'teams': ['Barcelona']
@@ -57,6 +56,11 @@ players = {
 player_names = None
 ```
 
+
+```python
+print(player_names)
+```
+
 **2) Great! Now that we have each players name, let's use that information to create a `list` of `tuples` containing each player's name along with their nationality. Store the list in a variable called `player_nationalities`**
 
 
@@ -65,6 +69,11 @@ player_names = None
 # a players name and the second is their nationality 
 # Ex: [('L. Messi', 'Argentina'), ('Christiano Ronaldo', 'Portugal'), ...]
 player_nationalities = None
+```
+
+
+```python
+print(player_nationalities)
 ```
 
 **3) Now, define a function called `get_players_on_team` that returns a `list` of the names of all the players who have played on a given team.** 
@@ -83,17 +92,18 @@ Your function should take two arguments:
 
 ```python
 players_on_manchester_united = get_players_on_team(players,'Manchester United')
+print(players_on_manchester_united)
 ```
 
-## Pandas and Numpy
+## Pandas  [Suggested Time: 15 minutes]
 
-In this section you will be doing some preprocessing and exploratory data analysis for a dataset for the videogame FIFA19 (https://www.kaggle.com/karangadiya/fifa19).  The dataset contains both data for the game as well as information about the players' real life careers.  You will be building toward running a regression. 
+In this section you will be doing some preprocessing for a dataset for the videogame FIFA19 (https://www.kaggle.com/karangadiya/fifa19).  The dataset contains both data for the game as well as information about the players' real life careers.
 
 **1) Read the CSV file into a pandas dataframe**
 
-The data you'll be working with is found in a file called './data/fifa.csv'.  Use your knowledge of pandas to create a new dataframe using the csv data. 
+The data you'll be working with is found in a file called `'./data/fifa.csv'`.  Use your knowledge of pandas to create a new dataframe using the csv data. 
 
-Check the contents of your dataframe with `df.head()`</b>
+Check the contents of the first few rows of your dataframe, then show the size of the dataframe
 
 
 ```python
@@ -106,12 +116,7 @@ warnings.filterwarnings('ignore')
 
 ```python
 df = None
-df.head()
 ```
-
-**2) Check for duplicates**
-    
-**First, check how many columns and rows are in the dataset, then check how many unique values are in the "ID" column.**
 
 
 ```python
@@ -119,31 +124,9 @@ df.head()
 
 ```
 
-
-```python
-# code here to check number of unique ids
-
-```
-
-<b> 3) Drop Duplicates
+**2. Drop n/a rows for "Release Clause"**
     
-It looks like there are duplicates.  Get rid of them by dropping duplicate rows. After you have dropped them, see how many rows are remaining.</b>
-
-
-```python
-# code here
-
-```
-
-
-```python
-# now see how many rows there are
-
-```
-
-<b> 4. Drop n/a rows for "Release Clause"
-    
-Drop rows for which "Release Clause" is none or not given. This is part of a soccer player's contract dealing with being bought out by another team. Release Clause will be the target variable for our regression model.  After you have dropped them, see how many rows are remaining.</b>
+**Drop rows for which "Release Clause" is none or not given. This is part of a soccer player's contract dealing with being bought out by another team. After you have dropped them, see how many rows are remaining.**
 
 
 ```python
@@ -157,55 +140,44 @@ Drop rows for which "Release Clause" is none or not given. This is part of a soc
 
 ```
 
-<b> 5) Convert players' heights to inches. Replace the original height column.
-First create a function, then use it on your dataframe. Create a function that convert a string into a integer and then apply that function to all of the height column.</b>
+**3) Convert the Release Clause Price from Euros to Dollars**
+
+Now that there are no n/a values, we can change the values in the `Release Clause` column from Euro to Dollar amounts.
+
+Assume the current Exchange Rate is
+`1 Euro = 1.2 Dollars`
 
 
 ```python
-# code here to write a helper function
-def convert_height(height):
-    '''
-    inputs: height (string)
-    ----
-    returns: height in inches (int)
-    '''
-    pass
-```
-
-
-```python
-# test here
-convert_height("5'7")
-```
-
-
-```python
-# code here to use the function on the height column
+ # code here to convert the column of euros to dollarss
 
 ```
 
-## Data Visualization
+## Data Visualization [Suggested Time: 20 minutes]
 
-<b> 1) Make a histogram of players age
-    
-_Add a title and x axis label._ Use whichever plotting library you are most comfortable with. </b>
+Continuing to use the same FIFA dataset, plot data using whichever plotting library you are most comfortable with.
 
 
 ```python
+# Don't forgot to run this cell
 import matplotlib.pyplot as plt
 import seaborn as sns
 %matplotlib inline
 ```
 
+**1) Find the top 10 countries with the most players (using the 'Nationality' column). Create a bar chart showing the number of players in those 10 countries**
 
-```python
-# histogram
+Don't forget to add a **title** and **x axis label** to your charts.
 
+If you are unable to find the top 10 countries but want the chance to demonstrate your plotting skills use the following dummy data to create a bar chart
 ```
-
-<b> 2) Make a bar chart for the 10 countries with the most players (by nationality)</b>
-
-Make sure to include x labels on your chart!
+Country Name  | Num Players
+============  | ===========
+Country A     | 100
+Country B     | 60
+Country C     | 125
+Country D     | 89
+```
 
 
 ```python
@@ -216,53 +188,39 @@ Make sure to include x labels on your chart!
 
 ```python
 # code here to plot a bar chart
-plt.subplots(figsize=(10,6))
+plt.figure(figsize=(10, 6))
 
 ```
 
-<b> 3) Make a scatter plot for the player stats StandingTackle and SlidingTackle
+**2) Below is a scatter plot for the player stats `StandingTackle` and `SlidingTackle`**
 
-What can we say about these two features? </b>
+**How would you describe the relationship between these two features.**
 
 
 ```python
-# code here to plot a scatterplot
-
-
+plt.scatter(df['StandingTackle'], df['SlidingTackle'])
+plt.title('Standing Tackle vs. Sliding Tackle')
+plt.xlabel('Standing Tackle')
+plt.ylabel('Sliding Tackle')
+plt.show()
 ```
+
+
+![png](index_files/index_32_0.png)
+
 
 
 ```python
-# Your written answer here
+"""
+Your written answer here
+"""
 ```
 
-### Exploring Statistical Data
+## Exploring Statistical Data [Suggested Time: 20 minutes]
 
-We'll continue using the same FIFA 2019 dataset.  This section will assess your ability to use numpy and work with summary statistics.
+**1) What are the mean age and the median age for the players in this dataset?** 
 
-<b>1) Convert the Release Clause Price from Euros to Dollars
-    
-Create a new column that has the 'release_clause' in dollars.
-
-1.2 Dollars = 1 Euro.</b>
-
-
-```python
-# code here to convert the column of euros to dollarss
-
-```
-
-<b>2) Get summary statistics for all numeric columns
-    
-(Please don't do each column individually!)</b>
-
-
-```python
-# code here
-
-```
-
-<b>3) What is the mean age and the median age for the players in this dataset?  How are the mean and median related to each other?</b>
+In your own words, how are the mean and median related to each other and what do these values tell us about the distribution of the variable 'Age'
 
 
 ```python
@@ -271,71 +229,17 @@ Create a new column that has the 'release_clause' in dollars.
 
 
 ```python
-# Your written answer here
+"""
+Your written answer here
+"""
 ```
 
-#### 4) Who is the oldest player in Argentina and how old is he?  
+**2) Who is the oldest player in Argentina and how old is he?**  
 
 
 ```python
 # code here
 ```
-
-
-```python
-# Your written answer here
-```
-
-## Linear Regression
-
-<b> 1) What are the covariance and correlation between "GKDiving" and "GKHandling"? </b>
-
-a. What is the difference between covariance and correlation?  
-b. What can you infer from the relationship between these variables?  
-c. Would it be a good idea to include both of these in a regression model?
-
-
-```python
-# code here
-
-```
-
-
-```python
-# Your written answer here
-```
-
-<b>2) Fit a linear regression using the `ols` module of statsmodels</b>
-
-Let's see how well each players' in-game stats reflect their real-world monetary value as a player. We  will not be considering real-world factors for this model, just the variables listed below.
-
-- y variable: Release Clause (the one in euros)
-- x variables: 'Finishing', 'HeadingAccuracy', 'ShortPassing', 'Volleys', 'Dribbling', 'Curve', 'FKAccuracy', 'LongPassing', 'BallControl', 'Acceleration', 'SprintSpeed', 'Agility', 'Reactions', 'Balance', 'ShotPower', 'Jumping', 'Stamina', 'Strength', 'LongShots', 'Aggression','Interceptions', 'Positioning', 'Vision', 'Penalties', 'Composure','Marking', 'StandingTackle', 'SlidingTackle', 'GKDiving', 'GKHandling','GKKicking', 'GKPositioning', 'GKReflexes'
-
-Once you have fit the linear regression, display the results (coefficient values, $R^2$, etc.). Displaying the results can be done with one method!
-
-
-```python
-# code here
-import statsmodels.api as sm
-from statsmodels.formula.api import ols
-
-Y = df['Release Clause']
-X = df[['Finishing', 'HeadingAccuracy', 'ShortPassing', 'Volleys', 'Dribbling', 'Curve', 'FKAccuracy', 'LongPassing', 'BallControl', 'Acceleration', 'SprintSpeed', 'Agility', 'Reactions', 'Balance', 'ShotPower', 'Jumping', 'Stamina', 'Strength', 'LongShots', 'Aggression','Interceptions', 'Positioning', 'Vision', 'Penalties', 'Composure','Marking', 'StandingTackle', 'SlidingTackle', 'GKDiving', 'GKHandling','GKKicking', 'GKPositioning', 'GKReflexes']]
-
-
-
-```
-
-<b> 3) Interpret the results of the regression. 
-
-Two players have the following stats: 
-
-1) Finishing : 1, Heading Accuracy : 10, ShortPassing : 5
-
-2) Finishing : 1, Heading Accuracy :  8, ShortPassing : 5
-
-Assume all the remaining stats are the same for both players. By how much can we expect the Release Clause of each player to be different? Explain how you obtained your calculation. </b>
 
 
 ```python
