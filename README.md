@@ -4,13 +4,9 @@
 This assessment is designed to test your understanding of the Mod 1 material. It covers:
 
 * Python Fundamentals
+* Working with Statistical Data
 * Pandas and Numpy
 * Data Visualization
-<<<<<<< HEAD
-=======
-* Exploring Statistical Data
-
->>>>>>> ceda88ff1e4804ad55635ef050c50fab7e50f54e
 
 Read the instructions carefully. You will be asked both to write code and respond to a few short answer questions.
 
@@ -101,11 +97,7 @@ print(players_on_manchester_united)
 
 ## Pandas  [Suggested Time: 15 minutes]
 
-<<<<<<< HEAD
 In this section you will be doing some preprocessing for a dataset for the videogame FIFA19 (https://www.kaggle.com/karangadiya/fifa19).  The dataset contains both data for the game as well as information about the players' real life careers.
-=======
-In this section you will be doing some preprocessing and exploratory data analysis for a dataset for the videogame FIFA19 (https://www.kaggle.com/karangadiya/fifa19).  The dataset contains both data for the game as well as information about the players' real life careers. 
->>>>>>> ceda88ff1e4804ad55635ef050c50fab7e50f54e
 
 **1) Read the CSV file into a pandas dataframe**
 
@@ -224,7 +216,6 @@ Your written answer here
 """
 ```
 
-<<<<<<< HEAD
 ## Exploring Statistical Data [Suggested Time: 20 minutes]
 
 **1) What are the mean age and the median age for the players in this dataset?** 
@@ -254,6 +245,3 @@ Your written answer here
 ```python
 # Your written answer here
 ```
-=======
-
->>>>>>> ceda88ff1e4804ad55635ef050c50fab7e50f54e
