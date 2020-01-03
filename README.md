@@ -1,7 +1,7 @@
 
-<h1 style='text-align:center'> Module 1 Assessment</h1>
+<h1 style='text-align:center'> Module 1 Code Challenge </h1>
 
-This assessment is designed to test your understanding of the Mod 1 material. It covers:
+This code challenge is designed to test your understanding of the Mod 1 material. It covers:
 
 * Python Fundamentals
 * Working with Statistical Data
@@ -18,7 +18,7 @@ For the short answer questions _please use your own words_. The expectation is t
 In the first section, we will work with various Python data types and try to accomplish certain tasks using some Python fundamentals. Below, we've defined a dictionary with soccer player names as keys for nested dictionaries containing information about each players age, nationality, and a list of teams they have played for.   
 
 
-```
+```python
 players = {
     'L. Messi': {
 		'age': 31,
@@ -51,20 +51,20 @@ players = {
 **1) Create a `list` of all the keys in the `players` dictionary. Use python's documentation on dictionaries for help if needed. Store the list of player names in a variable called `player_names` to use in the next question.**
 
 
-```
+```python
 # Get the list of all player names from the dictionary
 player_names = None
 ```
 
 
-```
+```python
 print(player_names)
 ```
 
 **2) Great! Now that we have each players name, let's use that information to create a `list` of `tuples` containing each player's name along with their nationality. Store the list in a variable called `player_nationalities`**
 
 
-```
+```python
 # Generate list of tuples such that the first element in the tuple is 
 # a players name and the second is their nationality 
 # Ex: [('L. Messi', 'Argentina'), ('Christiano Ronaldo', 'Portugal'), ...]
@@ -72,7 +72,7 @@ player_nationalities = None
 ```
 
 
-```
+```python
 print(player_nationalities)
 ```
 
@@ -85,12 +85,12 @@ Your function should take two arguments:
 **Be sure that your function has a `return` statement.**
 
 
-```
+```python
 # Define your get_players_on_team function here.
 ```
 
 
-```
+```python
 players_on_manchester_united = get_players_on_team(players,'Manchester United')
 print(players_on_manchester_united)
 ```
@@ -106,7 +106,7 @@ The data you'll be working with is found in a file called `'./data/fifa.csv'`.  
 Check the contents of the first few rows of your dataframe, then show the size of the dataframe
 
 
-```
+```python
 import pandas as pd
 import numpy as np
 import warnings
@@ -114,12 +114,12 @@ warnings.filterwarnings('ignore')
 ```
 
 
-```
+```python
 df = None
 ```
 
 
-```
+```python
 # code here to see the size of the dataframe
 
 ```
@@ -129,13 +129,13 @@ df = None
 **Drop rows for which "Release Clause" is none or not given. This is part of a soccer player's contract dealing with being bought out by another team. After you have dropped them, see how many rows are remaining.**
 
 
-```
+```python
 # code here to drop n/a rows
 
 ```
 
 
-```
+```python
 # now check how many rows are left 
 
 ```
@@ -148,7 +148,7 @@ Assume the current Exchange Rate is
 `1 Euro = 1.2 Dollars`
 
 
-```
+```python
  # code here to convert the column of euros to dollarss
 
 ```
@@ -158,7 +158,7 @@ Assume the current Exchange Rate is
 Continuing to use the same FIFA dataset, plot data using whichever plotting library you are most comfortable with.
 
 
-```
+```python
 # Don't forgot to run this cell
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -180,13 +180,13 @@ Country D     | 89
 ```
 
 
-```
+```python
 # code here to get the top 10 countries with the most players
 
 ```
 
 
-```
+```python
 # code here to plot a bar chart
 plt.figure(figsize=(10, 6))
 
@@ -197,7 +197,7 @@ plt.figure(figsize=(10, 6))
 **How would you describe the relationship between these two features.**
 
 
-```
+```python
 plt.scatter(df['StandingTackle'], df['SlidingTackle'])
 plt.title('Standing Tackle vs. Sliding Tackle')
 plt.xlabel('Standing Tackle')
@@ -210,7 +210,7 @@ plt.show()
 
 
 
-```
+```python
 """
 Your written answer here
 """
@@ -223,12 +223,12 @@ Your written answer here
 In your own words, how are the mean and median related to each other and what do these values tell us about the distribution of the variable 'Age'
 
 
-```
+```python
 # code here
 ```
 
 
-```
+```python
 """
 Your written answer here
 """
@@ -237,11 +237,11 @@ Your written answer here
 **2) Who is the oldest player in Argentina and how old is he?**  
 
 
-```
+```python
 # code here
 ```
 
 
-```
+```python
 # Your written answer here
 ```
