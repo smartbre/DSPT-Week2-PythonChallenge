@@ -34,7 +34,7 @@ warnings.filterwarnings('ignore')
 
 The data you'll be working with is in a file called `'./data/fifa.csv'`. Use your knowledge of pandas to create a new DataFrame, called `df`, using the data from this CSV file. 
 
-Check the contents of the first few rows of your DataFrame, then show the size of the DataFrame. 
+Check the contents of the first few rows of your DataFrame, then show the number of rows and columns in the DataFrame. 
 
 
 ```python
@@ -50,23 +50,23 @@ df = None
 
 
 ```python
-# Code here to see the size of the DataFrame
+# Code here to see the number of rows and columns in the DataFrame
 
 ```
 
-### 1.2) Drop rows with missing values for `'Release Clause'`
+### 1.2) Drop rows from the DataFrame with missing values for `'Release Clause'`
     
-Drop rows for which "Release Clause" is none or not given. This is part of a soccer player's contract dealing with being bought out by another team. After you have dropped them, see how many rows are remaining.
+Drop rows from the DataFrame for which "Release Clause" is missing. This is part of a soccer player's contract dealing with being bought out by another team. After you have dropped them, see how many rows are remaining in the DataFrame.
 
 
 ```python
-# Code here to drop rows with missing values for 'Release Clause'
+# Code here to drop rows from the DataFrame with missing values for 'Release Clause'
 
 ```
 
 
 ```python
-# Code here to check how many rows are left 
+# Code here to check how many rows are left in the DataFrame
 
 ```
 
