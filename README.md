@@ -1,4 +1,4 @@
-# Week 2 Python Review
+# Week 2 Python Practice
 
 Hello! This content is intended to test your understanding of the Python up through Topic 3.
 
